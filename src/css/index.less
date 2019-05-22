@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    html,
+    body {
+        overflow: hidden;
+        font-size: 1em;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: 100%;
+    }
+    .wrapper {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.2);
+        .song-info {
+            position: fixed; // padding: 5px 0;
+            width: 100%;
+            height: 40px;
+            padding-left: 40px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            p {
+                color: #fff;
+                margin: 5px 0 0 0;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            span {
+                font-size: 12px;
+                color: #ddd;
+            }
+            .glyphicon {
+                color: #fff;
+                display: inline-block;
+                position: absolute;
+                left: 10px;
+                top: 15px;
+                width: 30px;
+                height: 30px;
+                font-weight: 400;
+            }
+        }
+        .sonimg {
+            position: absolute;
+            padding-top: 70%;
+            box-sizing: border-box;
+            width: 70%;
+            height: 0;
+            margin-top: 35%;
+            left: 50%;
+            transform: translateX(-50%); // border: 1px solid #000;
+            .img-box {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center; // border: 1px solid #000;
+                img {
+                    border-radius: 50%;
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+        .pro {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            position: absolute;
+            top: 80%;
+            .pro-wrap {
+                width: 80%;
+                height: 2px;
+                background-color: #eee;
+                margin-top: 20px;
+                .progress-bar {
+                    position: absolute;
+                    top: 0;
+                    width: 0px;
+                    height: 2px;
+                    background-color: orange;
+                    margin-top: 20px;
+                }
+                // i{
+                //     position: absolute;
+                //     left: 90px;
+                //     width: 3px;
+                //     height: 3px;
+                //     display: block;
+                //     z-index: 30;
+                //     border-radius: 50%;
+                //     background-color: chartreuse;
+                // }
+            }
+            .cur-time,
+            .all-time {
+                float: right;
+                width: 60px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                color: #fff;
+            }
+            .cur-time {
+                float: left;
+            }
+            .pro-wrap {
+                float: left;
+            }
+        }
+        .control {
+            display: flex;
+            width: 100%;
+            height: 60px;
+            position: absolute;
+            bottom: 0px;
+            .btn {
+                flex: 1;
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: 20px;
+            }
+            .like {
+                background-image: url(../images/icon-like.png);
+                &.liking {
+                    background-image: url(../images/icon-like-solid.png);
+                }
+            }
+            .prev {
+                background-image: url(../images/icon-prev.png);
+            }
+            .play {
+                background-image: url(../images/icon-play.png);
+                &.playing {
+                    background-image: url(../images/icon-pause.png);
+                }
+            }
+            .next {
+                background-image: url(../images/icon-next.png);
+            }
+            .list {
+                background-image: url(../images/icon-list.png);
+            }
+            .music-list {
+                width: 100%;
+                max-height: 300px;
+                border-radius: 8px;
+                background-color: #eee;
+                position: absolute;
+                bottom: -300px;
+                z-index: 2;
+                li {
+                    width: 100%;
+                    height: 40px;
+                    line-height: 40px;
+                    border-bottom: 1px solid #ddd;
+                    padding-left: 5px;
+                    span {
+                        font-size: 14px;
+                    }
+                    span.singer {
+                        font-size: 10px;
+                        color: #bbb;
+                    }
+                }
+            }
+        }
+    }
+}
